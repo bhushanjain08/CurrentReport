@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "reporter"
+  "defaultProject": "reporter",
+  "cli": {
+    "analytics": false
+  }
 }
