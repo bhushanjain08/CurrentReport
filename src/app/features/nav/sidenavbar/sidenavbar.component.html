@@ -1,1 +1,15 @@
-<p>sidenav works!</p>
+
+<div id="mySidebar" [style.width.px]="width" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+    <a href="#">Text</a>
+    <a href="#">Photos</a>
+    <a href="#">Reports</a>
+    <a href="#">About us</a>
+    <a href="#">Terms & conditions</a>
+    <a href="#">Privacy</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <div id="main" [style.width.px]="width">
+    <button class="openbtn" (click)="openNav()">☰ Open Sidebar</button>     
+  </div>

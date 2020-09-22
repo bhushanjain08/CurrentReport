@@ -1,1 +1,22 @@
-<app-topnav></app-topnav>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+            <app-topnav></app-topnav>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-sidenavbar></app-sidenavbar>
+                </div>
+                <div class="col-md-8 padding-top: 500px">
+                    <div *ngFor="let txt of apiData">
+
+                        <p>{{txt.title}}</p>
+                    </div>
+                    <app-texts></app-texts>
+                    <router-outlet></router-outlet>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
