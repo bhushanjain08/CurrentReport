@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { OfflineService } from './core/services/offline.service';
 declare var $: any;
 
 interface ApiData {
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit {
 
   isCollapsed: boolean;
   public apiData: ApiData[];
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private offlineServ: OfflineService) {
     this.fetchdata();
 
   }
