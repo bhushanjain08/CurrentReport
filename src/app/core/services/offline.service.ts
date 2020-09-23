@@ -11,7 +11,7 @@ export class OfflineService {
     console.log("OfflineService Reached")
     this.updateClient();
     this.checkUpdate();
-   }
+  }
 
 
   updateClient() {
@@ -20,8 +20,8 @@ export class OfflineService {
       return;
     }
     this.update.available.subscribe((event) => {
-      console.log(`current`, event.current, `available `, event.available);
-      if (confirm('update available for the app please conform')) {
+      console.log('current', event.current, 'available', event.available);
+      if (confirm('Update available for the app please conform.')) {
         this.update.activateUpdate().then(() => location.reload());
       }
     });
@@ -34,14 +34,23 @@ export class OfflineService {
   checkUpdate() {
     this.appRef.isStable.subscribe((isStable) => {
       if (isStable) {
-        const timeInterval = interval(8 * 60 * 60 * 1000);
+        // const timeInterval = interval(8 * 60 * 60 * 1000);
+        const timeInterval = interval(60000);
 
         timeInterval.subscribe(() => {
           this.update.checkForUpdate().then(() => console.log('looking for updates'));
           console.log('update checked');
+          //this.updateClient();//
         });
       }
     });
+  }
+
+  backgroundSync() {
+    console.log('backgroundSync');
+    navigator.serviceWorker.ready
+      .then((swRegistration) => swRegistration.sync.register('post-data'))
+      .catch(console.log);
   }
 }
 

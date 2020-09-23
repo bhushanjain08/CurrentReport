@@ -9,10 +9,14 @@ import { NavModule } from './features/nav/nav.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TextReportModule } from './features/text-report/text-report.module';
+import { HomeComponent } from './features/home/home.component';
+import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,8 @@ import { TextReportModule } from './features/text-report/text-report.module';
     NavModule,
     HttpClientModule,
     TextReportModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('service-worker.js', { enabled: environment.production })
+    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

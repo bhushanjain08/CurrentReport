@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenavbar',
@@ -9,9 +10,10 @@ export class SidenavbarComponent implements OnInit {
   width: number = 250;
   isCollapsed: boolean;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.closeNav();
   }
 
   closeNav() {
@@ -19,7 +21,11 @@ export class SidenavbarComponent implements OnInit {
   }
   openNav() {
     this.width = 250;
+  }
 
+  navigate(route: string) {
+    this.router.navigate(['/' + route + '/']);
+    this.closeNav();
   }
 
 }

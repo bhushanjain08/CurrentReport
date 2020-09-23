@@ -8,13 +8,15 @@
                     <app-sidenavbar></app-sidenavbar>
                 </div>
                 <div class="col-md-8 padding-top: 500px">
-                    <div *ngFor="let txt of apiData">
-
-                        <p>{{txt.title}}</p>
-                    </div>
+                   
+                    <!-- <button class="btn btn-light" (click)="postData()">Post Data</button> -->
                     <!-- <app-texts></app-texts> -->
                     <router-outlet></router-outlet>
-
+                    <!-- <div *ngFor="let txt of apiData">
+                        <h6><p>{{txt.headline}}</p></h6>
+                        <p>{{txt.category}}</p>
+                        <p>{{txt.body}}</p>
+                    </div> -->
                 </div>
             </div>
         </div>
