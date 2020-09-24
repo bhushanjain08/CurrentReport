@@ -1,0 +1,31 @@
+
+<div>
+
+<div 
+ *ngFor="let report of reportsBSubject | async">
+   
+               <h3><b>{{report.headline}}</b></h3>
+                <p>{{report.category}}</p>
+                <p>{{report.body}}</p>
+                      
+</div>
+<app-spinner *ngIf="spinner"></app-spinner>
+
+</div>
+
+<hr>
+
+<div 
+
+infiniteScroll
+[infiniteScrollDistance]="scrollDistance"
+[infiniteScrollThrottle]="throttle"
+(scrolled)="onScrollDown()"
+
+>
+
+</div>
+
+<div *ngIf="finished">
+    <p>End of page reached!</p>
+</div>

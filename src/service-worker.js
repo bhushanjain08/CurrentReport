@@ -39,7 +39,7 @@ function getAndSendData() {
   let db;
   const request = indexedDB.open('reporter-db');
   request.onerror = (event) => {
-    console.log('Please allow my web app to use IndexedDB.');
+    console.log('Please allow Reporter app to use IndexedDB.');
   };
   request.onsuccess = (event) => {
     db = event.target.result;

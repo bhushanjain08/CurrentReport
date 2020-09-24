@@ -11,12 +11,15 @@ import { environment } from '../environments/environment';
 import { TextReportModule } from './features/text-report/text-report.module';
 import { HomeComponent } from './features/home/home.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { ReportsModule } from './features/reports/reports.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,10 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
     NavModule,
     HttpClientModule,
     TextReportModule,
-    ServiceWorkerModule.register('service-worker.js', { enabled: environment.production })
+    ReportsModule,
+    SharedModule,
+    ServiceWorkerModule.register('service-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule
     // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
