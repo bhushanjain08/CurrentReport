@@ -60,10 +60,12 @@ export class ReportComponent implements OnInit {
 
   onScrollDown() {
     this.spinner =true;
-    setTimeout(function(){
-      this.spinner =false;
-    },1000);
+    // setTimeout(function(){
+    //   console.log(this.spinner);
+    // },5000);
+    console.log(this.spinner);
     this.getReports();
+    this.spinner =false;
   }
 
   onUp() {
