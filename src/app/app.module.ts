@@ -14,12 +14,20 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
 import { ReportsModule } from './features/reports/reports.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { PrivacyComponent } from './features/privacy/privacy.component';
+import { ContactComponent } from './features/contact/contact.component';
+import { AboutComponent } from './features/about/about.component';
+import { TermsComponent } from './features/terms/terms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent    
+    PageNotFoundComponent,
+    AboutComponent,
+    PrivacyComponent,
+    ContactComponent,
+    TermsComponent    
   ],
   imports: [
     BrowserModule,
