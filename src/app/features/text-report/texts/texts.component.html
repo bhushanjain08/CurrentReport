@@ -4,6 +4,7 @@
   <div class="form-group">
     <label for="categorySelect">Choose Category</label>
     <select class="form-control" id="category" name="category" ngModel #category="ngModel">
+      <option>Select Category</option>
       <option>Breaking News</option>
       <option>Business News</option>
       <option>Sports</option>
@@ -20,7 +21,8 @@
     <label for="description"> Story Description</label>
     <textarea class="form-control" id="description" rows="3" name="description" ngModel #description="ngModel"
       required></textarea>
-  </div>
+  
   <button type="submit" [disabled]="!textForm.valid" class="btn btn-success">Upload</button>
   <button type="reset" class="btn btn-danger">Reset</button>
+</div>
 </form>

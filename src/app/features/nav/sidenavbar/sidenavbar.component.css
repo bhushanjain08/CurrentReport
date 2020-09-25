@@ -45,11 +45,13 @@
     background-color: #444;
   }
   
-  #main {
+  /* #main {
     position: fixed;
-    transition: margin-left .5s;
+    left: 0;
+    top: 5%;
+    transition: margin-left 0;
     padding: 16px;
-  }
+  } */
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {

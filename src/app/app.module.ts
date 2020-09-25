@@ -19,6 +19,9 @@ import { ContactComponent } from './features/contact/contact.component';
 import { AboutComponent } from './features/about/about.component';
 import { TermsComponent } from './features/terms/terms.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,9 @@ import { TermsComponent } from './features/terms/terms.component';
     AboutComponent,
     PrivacyComponent,
     ContactComponent,
-    TermsComponent    
+    TermsComponent,
+
+       
   ],
   imports: [
     BrowserModule,
