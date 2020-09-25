@@ -18,8 +18,7 @@ import { PrivacyComponent } from './features/privacy/privacy.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { AboutComponent } from './features/about/about.component';
 import { TermsComponent } from './features/terms/terms.component';
-
-
+import { PhotoReportModule } from './features/photo-report/photo-report.module'
 
 
 @NgModule({
@@ -30,9 +29,7 @@ import { TermsComponent } from './features/terms/terms.component';
     AboutComponent,
     PrivacyComponent,
     ContactComponent,
-    TermsComponent,
-
-       
+    TermsComponent    
   ],
   imports: [
     BrowserModule,
@@ -41,6 +38,7 @@ import { TermsComponent } from './features/terms/terms.component';
     NavModule,
     HttpClientModule,
     TextReportModule,
+    PhotoReportModule,
     ReportsModule,
     SharedModule,
     ServiceWorkerModule.register('service-worker.js', { enabled: environment.production }),
