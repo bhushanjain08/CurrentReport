@@ -25,6 +25,7 @@ export class TextsComponent implements OnInit {
     this.report.category = this.textForm.controls["category"].value;
     // console.log(this.report);
     this.uploadServ.uploadReport(this.report);
+    this.textForm.reset();
   }
 
 }
