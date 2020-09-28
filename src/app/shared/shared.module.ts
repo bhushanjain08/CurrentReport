@@ -6,14 +6,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectValidatorDirective } from './select-validator.directive';
 
 
-
 @NgModule({
-  declarations: [SpinnerComponent,  AlertComponent, SelectValidatorDirective
+  declarations: [SpinnerComponent,  AlertComponent,SelectValidatorDirective
      ],
   imports: [
     CommonModule,
     NgbModule
   ],
-  exports:[SpinnerComponent,AlertComponent]
+  exports:[SpinnerComponent,AlertComponent,SelectValidatorDirective]
 })
 export class SharedModule { }

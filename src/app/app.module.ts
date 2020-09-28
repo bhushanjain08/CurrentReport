@@ -20,6 +20,7 @@ import { AboutComponent } from './features/about/about.component';
 import { TermsComponent } from './features/terms/terms.component';
 import { PhotoReportModule } from './features/photo-report/photo-report.module'
 import { ErrorInterceptor } from './core/services/error.interceptor';
+import { SelectValidatorDirective } from './shared/select-validator.directive';
 
 
 
@@ -31,7 +32,7 @@ import { ErrorInterceptor } from './core/services/error.interceptor';
     AboutComponent,
     PrivacyComponent,
     ContactComponent,
-    TermsComponent        
+    TermsComponent            
   ],
   imports: [
     BrowserModule,

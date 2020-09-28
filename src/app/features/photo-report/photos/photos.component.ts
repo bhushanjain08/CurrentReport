@@ -12,7 +12,7 @@ export class PhotosComponent implements OnInit {
 
   @ViewChild('textform') textform: NgForm;
   report: Report;
-  photoSelect = null;
+  photoSelect = 'Select Category';
   constructor(private uploadServ: ReportService) { }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class PhotosComponent implements OnInit {
     console.log(this.report);
     this.uploadServ.uploadReport(this.report);
     this.textform.reset();
-    this.photoSelect ='-1';
+    this.photoSelect ='Select Category';
   }
 
 }

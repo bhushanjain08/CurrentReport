@@ -1,49 +1,49 @@
 <div class="row">
   <div class="col-md-8">
-<h1>Upload Photo</h1>
-<form (ngSubmit)="onSubmit()" #textform="ngForm">
+    <h1>Upload Photo</h1>
+    <form (ngSubmit)="onSubmit()" #textform="ngForm">
 
-  <div class="form-group">
-    <label for="categorySelect">Choose Category</label>
-    <select appSelectValidator class="form-control" id="category" name="category"
-     [(ngModel)]='photoSelect' 
-    ngModel #category="ngModel" 
-    required>
-      <option value="-1">Select Category</option>
-      <option>Breaking News</option>
-      <option>Business News</option>
-      <option>Sports</option>
-      <option>Entertainment</option>
-      <option>Others</option>
-    </select>
-    <span *ngIf="category.errors?.defaultSelected">Category is required.</span>
-    <span *ngIf="!category.valid">Category is required.</span>
+      <div class="form-group">
+        <label for="categorySelect">Choose Category</label>
+        <select appSelectValidator class="form-control" id="category" name="category" 
+        [(ngModel)]='photoSelect' ngModel
+          #category="ngModel" appSelectValidator="Select Category">
+          <option>Select Category</option>
+          <option>Breaking News</option>
+          <option>Business News</option>
+          <option>Sports</option>
+          <option>Entertainment</option>
+          <option>Others</option>
+        </select>
+        <span *ngIf="category.errors?.defaultSelected && (category.dirty)">
+          Please choose a Category.</span>
+
+      </div>
+      <div class="form-group">
+        <label for="headline"> Headline</label>
+        <textarea class="form-control" id="headline" rows="1" name="headline" ngModel #headline="ngModel"
+          required></textarea>
+        <span *ngIf="!headline.valid && headline.touched">Headline is required.</span>
+
+      </div>
+      <div class="form-group">
+        <label for="chooseFile">Choose File</label>
+        <input type="file" class="form-control-file" id="chooseFile">
+      </div>
+      <div class="form-group">
+        <label for="description"> Story Description</label>
+        <textarea class="form-control" id="description" rows="3" name="description" ngModel #description="ngModel"
+          required></textarea>
+        <span *ngIf="!description.valid && description.touched">Description is required.</span>
+
+      </div>
+
+      <div>
+        <button type="submit" [disabled]="!textform.valid" class="btn btn-success">Upload</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+      </div>
+
+    </form>
 
   </div>
-  <div class="form-group">
-    <label for="headline"> Headline</label>
-    <textarea class="form-control" id="headline" rows="1" name="headline" ngModel #headline="ngModel"
-      required></textarea>
-    <span *ngIf="!headline.valid && headline.touched">Headline is required.</span>
-
-  </div>
-  <div class="form-group">
-    <label for="chooseFile">Choose File</label>
-    <input type="file" class="form-control-file" id="chooseFile">
-  </div>
-  <div class="form-group">
-    <label for="description"> Story Description</label>
-    <textarea class="form-control" id="description" rows="3" name="description" ngModel #description="ngModel"
-      required></textarea>
-    <span *ngIf="!description.valid && description.touched">Description is required.</span>
-
-  </div>
-
-  <div>
-    <button type="submit" [disabled]="!textform.valid" class="btn btn-success">Upload</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
-  </div>
-
-</form>
-
-</div></div>
+</div>
