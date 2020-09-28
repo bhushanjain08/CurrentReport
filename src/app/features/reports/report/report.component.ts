@@ -44,7 +44,8 @@ export class ReportComponent implements OnInit {
       this.reportsBSubject.next(this.reports.slice(0, 6));
       this.lastKey = 6;
       this.spinner = false;
-    });
+    },
+    );
 
   }
 

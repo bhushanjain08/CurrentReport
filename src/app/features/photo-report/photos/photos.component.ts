@@ -12,6 +12,7 @@ export class PhotosComponent implements OnInit {
 
   @ViewChild('textform') textform: NgForm;
   report: Report;
+  photoSelect = 'Select Category';
   constructor(private uploadServ: ReportService) { }
 
   ngOnInit(): void {

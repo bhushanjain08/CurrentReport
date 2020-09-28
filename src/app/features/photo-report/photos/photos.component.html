@@ -3,7 +3,7 @@
 
   <div class="form-group">
     <label for="categorySelect">Choose Category</label>
-    <select class="form-control" id="category" name="category" ngModel #category="ngModel">
+    <select class="form-control" id="category" name="category" [(ngModel)]='photoSelect' ngModel #category="ngModel">
       <option>Select Category</option>
       <option>Breaking News</option>
       <option>Business News</option>
@@ -16,6 +16,8 @@
     <label for="headline"> Headline</label>
     <textarea class="form-control" id="headline" rows="1" name="headline" ngModel #headline="ngModel"
       required></textarea>
+    <span *ngIf="!headline.valid && headline.touched">Headline is required.</span>
+
   </div>
   <div class="form-group">
     <label for="chooseFile">Choose File</label>
@@ -25,8 +27,13 @@
     <label for="description"> Story Description</label>
     <textarea class="form-control" id="description" rows="3" name="description" ngModel #description="ngModel"
       required></textarea>
-  
-  <button type="submit" [disabled]="!textform.valid" class="btn btn-success">Upload</button>
-  <button type="reset" class="btn btn-danger">Reset</button>
-</div>
+    <span *ngIf="!description.valid && description.touched">Description is required.</span>
+
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!textform.valid" class="btn btn-success">Upload</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+  </div>
+
 </form>
