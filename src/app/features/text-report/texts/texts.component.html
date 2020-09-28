@@ -1,9 +1,12 @@
+<div class="row">
+  <div class="col-md-8">
 <h1>Upload Text</h1>
 <form (ngSubmit)="onSubmit()" #textForm="ngForm">
 
   <div class="form-group">
     <label for="categorySelect">Choose Category</label>
-    <select class="form-control" id="category" name="category" [(ngModel)]='reportSelect' ngModel #category="ngModel">
+    <select class="form-control" id="category" name="category" [(ngModel)]='reportSelect' 
+    ngModel #category="ngModel">
       <option>Select Category</option>
       <option>Breaking News</option>
       <option>Business News</option>
@@ -29,3 +32,5 @@
   <button type="reset" class="btn btn-danger">Reset</button>
 <!-- </div> -->
 </form>
+
+</div></div>

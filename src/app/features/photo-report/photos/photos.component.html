@@ -1,16 +1,24 @@
+<div class="row">
+  <div class="col-md-8">
 <h1>Upload Photo</h1>
 <form (ngSubmit)="onSubmit()" #textform="ngForm">
 
   <div class="form-group">
     <label for="categorySelect">Choose Category</label>
-    <select class="form-control" id="category" name="category" [(ngModel)]='photoSelect' ngModel #category="ngModel">
-      <option>Select Category</option>
+    <select appSelectValidator class="form-control" id="category" name="category"
+     [(ngModel)]='photoSelect' 
+    ngModel #category="ngModel" 
+    required>
+      <option value="-1">Select Category</option>
       <option>Breaking News</option>
       <option>Business News</option>
       <option>Sports</option>
       <option>Entertainment</option>
       <option>Others</option>
     </select>
+    <span *ngIf="category.errors?.defaultSelected">Category is required.</span>
+    <span *ngIf="!category.valid">Category is required.</span>
+
   </div>
   <div class="form-group">
     <label for="headline"> Headline</label>
@@ -37,3 +45,5 @@
   </div>
 
 </form>
+
+</div></div>

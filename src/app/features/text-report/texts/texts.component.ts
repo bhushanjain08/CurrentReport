@@ -28,6 +28,7 @@ export class TextsComponent implements OnInit {
     // console.log(this.report);
     this.uploadServ.uploadReport(this.report);
     this.textForm.reset();
+    this.reportSelect ='Select Category';
   }
 
 }

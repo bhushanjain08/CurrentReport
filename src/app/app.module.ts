@@ -19,6 +19,8 @@ import { ContactComponent } from './features/contact/contact.component';
 import { AboutComponent } from './features/about/about.component';
 import { TermsComponent } from './features/terms/terms.component';
 import { PhotoReportModule } from './features/photo-report/photo-report.module'
+import { ErrorInterceptor } from './core/services/error.interceptor';
+
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { PhotoReportModule } from './features/photo-report/photo-report.module'
     AboutComponent,
     PrivacyComponent,
     ContactComponent,
-    TermsComponent    
+    TermsComponent        
   ],
   imports: [
     BrowserModule,
@@ -40,12 +42,20 @@ import { PhotoReportModule } from './features/photo-report/photo-report.module'
     TextReportModule,
     PhotoReportModule,
     ReportsModule,
-    SharedModule,
+    SharedModule,    
     ServiceWorkerModule.register('service-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule
     // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    ErrorInterceptor,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true,
+    }
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
