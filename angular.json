@@ -29,6 +29,8 @@
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/font-awesome/fonts/fontawesome-webfont.svg",
+              "node_modules/font-awesome/fonts/fontawesome-webfont.eot",
               "src/styles.css"
             ],
             "scripts": [
