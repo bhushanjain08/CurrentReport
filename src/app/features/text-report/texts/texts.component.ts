@@ -12,9 +12,11 @@ export class TextsComponent implements OnInit {
 
   @ViewChild('textForm') textForm: NgForm;
   report: Report;
+  reportSelect = 'Select Category';
   constructor(private uploadServ: ReportService) { }
 
   ngOnInit(): void {
+
   }
 
   onSubmit(): void {
