@@ -1,5 +1,5 @@
 .container{
-    margin-top: 30px;
+    margin-top: 0px;
 }
 input.ng-invalid.ng-touched{
     border: 1px solid red;
@@ -9,4 +9,8 @@ textarea.ng-invalid.ng-touched{
 }
 select.ng-invalid.ng-touched{
     border: 1px solid red;
+}
+.jumbotron{
+    height: 0;
+    width: 100%;
 }
