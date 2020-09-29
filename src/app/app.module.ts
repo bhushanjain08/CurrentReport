@@ -21,6 +21,7 @@ import { TermsComponent } from './features/terms/terms.component';
 import { PhotoReportModule } from './features/photo-report/photo-report.module'
 import { ErrorInterceptor } from './core/services/error.interceptor';
 import { SelectValidatorDirective } from './shared/select-validator.directive';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,6 +39,7 @@ import { SelectValidatorDirective } from './shared/select-validator.directive';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     NavModule,
     HttpClientModule,
     TextReportModule,
