@@ -1,10 +1,12 @@
 <div class="row">
   <div class="col-md-8">
-    <h1>Upload Text</h1>
+    <div class="jumbotron">
+      <h1 style="font-size:4vw">Upload Text:</h1>      
+  </div>
     <form (ngSubmit)="onSubmit()" #textForm="ngForm">
 
       <div class="form-group">
-        <label for="categorySelect">Choose Category</label>
+        <label for="categorySelect"><b>Choose Category</b></label>
         <select class="form-control" id="category" name="category" [(ngModel)]='reportSelect' ngModel
           #category="ngModel" appSelectValidator="Select Category">
           <option>Select Category</option>
@@ -19,19 +21,19 @@
       </div>
 
       <div class="form-group">
-        <label for="headline"> Headline</label>
+        <label for="headline"><b>Headline</b> </label>
         <textarea class="form-control" id="headline" rows="1" name="headline" ngModel #headline="ngModel"
           required></textarea>
         <span *ngIf="!headline.valid && headline.touched">Headline is required.</span>
       </div>
       <div class="form-group">
-        <label for="description"> Story Description</label>
+        <label for="description"><b>Story Description</b> </label>
         <textarea class="form-control" id="description" rows="3" name="description" ngModel #description="ngModel"
           required></textarea>
         <span *ngIf="!description.valid && description.touched">Description is required.</span>
 
       </div>
-      <button type="submit" [disabled]="!textForm.valid" class="btn btn-success">Upload</button>
+      <button type="submit" [disabled]="!textForm.valid" class="btn btn-success mr-2">Upload</button>
       <button type="reset" class="btn btn-danger">Reset</button>
       <!-- </div> -->
     </form>
