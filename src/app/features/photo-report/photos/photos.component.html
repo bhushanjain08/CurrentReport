@@ -1,14 +1,13 @@
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10">
     <div class="jumbotron">
-      <h1 style="font-size:4vw">Upload Photo:</h1>      
-  </div>
+      <h1 style="font-size:4vw">Upload Photo:</h1>
+    </div>
     <form (ngSubmit)="onSubmit()" #textform="ngForm">
 
       <div class="form-group">
         <label for="categorySelect"><b>Choose Category</b></label>
-        <select appSelectValidator class="form-control" id="category" name="category" 
-        [(ngModel)]='photoSelect' ngModel
+        <select appSelectValidator class="form-control" id="category" name="category" [(ngModel)]='photoSelect' ngModel
           #category="ngModel" appSelectValidator="Select Category">
           <option>Select Category</option>
           <option>Breaking News</option>

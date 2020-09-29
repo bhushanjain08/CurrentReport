@@ -11,12 +11,8 @@
 
 <hr />
 
-<div
-  infiniteScroll
-  [infiniteScrollDistance]="scrollDistance"
-  [infiniteScrollThrottle]="throttle"
-  (scrolled)="onScrollDown()"
-></div>
+<div infiniteScroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollDown()"></div>
 
 <div *ngIf="finished">
   <p>End of page reached!</p>

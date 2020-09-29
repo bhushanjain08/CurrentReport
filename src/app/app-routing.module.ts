@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { from } from 'rxjs';
 import { AboutComponent } from './features/about/about.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { HomeComponent } from './features/home/home.component';
@@ -9,7 +8,7 @@ import { PrivacyComponent } from './features/privacy/privacy.component';
 import { ReportComponent } from './features/reports/report/report.component';
 import { TermsComponent } from './features/terms/terms.component';
 import { TextsComponent } from './features/text-report/texts/texts.component';
-import{PhotosComponent} from './features/photo-report/photos/photos.component';
+import { PhotosComponent } from './features/photo-report/photos/photos.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
